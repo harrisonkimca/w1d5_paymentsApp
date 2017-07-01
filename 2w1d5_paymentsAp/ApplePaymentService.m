@@ -10,4 +10,21 @@
 
 @implementation ApplePaymentService
 
+- (void)processPaymentAmount:(NSInteger)amount
+{
+    NSLog(@"Apple processed amount $%lu", amount);
+}
+
+- (BOOL)canProcessPayment
+{
+    if(arc4random_uniform(2) == 0)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 @end

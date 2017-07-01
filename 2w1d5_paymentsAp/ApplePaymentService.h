@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PaymentGateway.h"
 
-@interface ApplePaymentService : NSObject
+@interface ApplePaymentService : NSObject <PaymentDelegate>
 
 @end
